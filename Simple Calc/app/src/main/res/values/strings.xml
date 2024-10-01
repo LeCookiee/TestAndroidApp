@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Math: Calculators for Everyone</string>
+
+    <!-- strings for fragment_linear_system -->
+    <string name="linear_system_fragment_title">System of Linear Equations Solver</string>
+    <string name="linear_system_fragment_desc">\tThis calculator outputs the solution(s) given a system
+        of linear equations. Input a minimum of two equations, then press Solve to see the solution if it exists.
+        If the system has more than one solution, only the first solution found will be displayed.</string>
+
+    <!-- strings for echelon_form_fragment -->
+    <string name="echelon_form_fragment_title">Echelon Form Calculator</string>
+    <string name="echelon_calc_fragment_desc">\tThis calculator will reduce a matrix into reduced
+        echelon form. Input the number of rows and columns of the matrix, input the matrix elements,
+        and then press Calculate to get the matrix in reduced echelon form. \n\tWhen inputting matrix elements
+        for a row, separate each element by a single space. When inputting elements for another row,
+        use a new line.</string>
+    <string name="enterMatrix">Enter Matrix Elements:</string>
+
+    <!-- strings for  fragment_calc-->
+    <string name="clear" translatable="false">C</string>
+    <string name="nine" translatable="false">9</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="six" translatable="false">6</string>
+    <string name="exponent" translatable="false">^</string>
+    <string name="parenthesis" translatable="false">( )</string>
+    <string name="multiply" translatable="false">*</string>
+    <string name="divide" translatable="false">/</string>
+    <string name="add" translatable="false">+</string>
+    <string name="subtract" translatable="false">-</string>
+    <string name="five" translatable="false">5</string>
+    <string name="four" translatable="false">4</string>
+    <string name="three" translatable="false">3</string>
+    <string name="two" translatable="false">2</string>
+    <string name="one" translatable="false">1</string>
+    <string name="point" translatable="false">.</string>
+    <string name="equals" translatable="false">=</string>
+    <string name="backspace">Delete</string>
+    <string name="input_values">Input Values</string>
+    <string name="zero" translatable="false">0</string>
+
+    <string name="inverse_matrix_fragment_title">Inverse of Matrix Calculator</string>
+    <string name="inverse_matrix_fragment_desc">\tThis calculator will find the inverse of the an
+        input square matrix, if it exists. Input the matrix size, fill in the matrix elements, and
+        then press Calculate to see the result. Separate each element by a single space when
+        inputting elements. When inputting elements for another row, use a new line.</string>
+
+    <string name="determinant_calc_fragment_title">Determinant Calculator</string>
+    <string name="determinant_calc_fragment_desc">This calculator will find the determinant of the
+        an input matrix. Input the number of rows and columns of the matrix, fill in the matrix
+        elements, and then press Calculate to see the result. Separate each element by a single
+        space when inputting elements. When inputting elements for another row, use a new line.</string>
+
+    <!-- strings for  Main Screen and Introduction Fragments-->
+    <string name="basic_calculator">Basic Calculator</string>
+    <string name="introduction">Introduction</string>
+    <string name="nullspace_calc_fragment_title">Null Space Calculator</string>
+    <string name="nullspace_calc_fragment_desc">This calculator will find the list of vectors that
+        span the null space of the input matrix. Input the number of rows and columns of the matrix,
+        input the matrix elements, and then press Calculate to get the matrix in reduced echelon
+        form. When inputting matrix elements for a row, separate each element by a single space.
+        When inputting elements for another row, use a new line.</string>
+    <string name="intro_blurb">\tWelcome to \'Math: Calculators for Everyone\'! Our goal is to
+        allow you to have access to more than one calculator to fit all of your needs.
+        \n \tWe offer to you a Basic Calculator, with which you can use for most basic math
+        equations, such as add, subtract, multiply and divide.
+        \n \tOur Inverse Matrix Calculator quickly calculates the inverse of your provided matrix with ease.
+        \n \tWe have our Echelon Calculator which reduces a matrix into reduced echelon form in no time!
+        \n \tOur next calculator is our System of Linear Systems calculator, that can solve System of Linear Equation Problems.
+        If you need help finding x and y, we have your back!
+        \n \tNext we have our Determinant Calculator. Another calculator that works with matrices, this calculator
+        will reduce to echelon form and multiply the matrix by itself. All you need to do is provide the values!
+        \n \tFinally, we have our Null Space Calculator, which will compute the null space of your provided matrix.
+        \n \nHappy Calculating!
+    </string>
+    <string name="syst_o_le_title">Systems of Linear Equations</string>
+    <string name="echelon_form">Echelon Form</string>
+    <string name="check_links">Are you interested in learning more about how some of these
+        calculators work? Check out the links down below!</string>
+
+    <!-- misc strings-->
+    <string name="solution_displayed_below">Solution will be displayed below</string>
+    <string name="enter_matrix_elements">Enter matrix elements</string>
+    <string name="matrix_size">Matrix size:</string>
+    <string name="errors_found_no_errors_found">Errors found: No errors found</string>
+    <string name="solve">Solve</string>
+    <string name="number_of_rows">Number of rows:</string>
+    <string name="number_of_columns">Number of columns:</string>
+    <string name="solution_will_be_displayed_below">Solution will be displayed below</string>
+    <string name="welcome_to_math_calculators_for_everyone">Welcome to Math: Calculators for Everyone</string>
+    <string name="match_calculators_for_everyone">Match Calculators for Everyone</string>
+    <string name="delete_app">Delete App</string>
+    <string name="textview">TextView</string>
+    <string name="solutions">Solutions:</string>
+    <string name="enter_each_equation_on_a_separate_line">Enter each equation on a separate line:</string>
+    <string name="variables_detected_none">Variables detected: None</string>
+    <string name="calc_nav_fragment_desc"> Select any calculator you want to use from the list below. </string>
+    <string name="calc_list_display_btn">List of Calculators</string>
+    <string name="calc_list_fragment_title">List of Available Calculators</string>
+    <string name="home">Home</string>
+    <string name="no_input_val_for_matrix_size">No input value for matrix size</string>
+    <string name="error_matrix_size">ERROR: Matrix size is limited to a maximum of 10 rows and 10 columns</string>
+    <string name="syntax_error">SYNTAX ERROR: Matrix can not have zero rows or zero columns</string>
+    <string name="matrix_does_not_have_inverse">Matrix does not have an inverse</string>
+    <string name="evaluation_error">EVALUATION ERROR: Check if input is valid, then try again.</string>
+    <string name="variables_detected">Variables detected</string>
+    <string name="system_no_solution">System does not have a solution</string>
+    <string name="system_solution_found">System solution has been found</string>
+    <string name="inverse_matrix">Inverse Matrix</string>
+    <string name="determinant">Determinant</string>
+    <string name="null_space">Null Space</string>
+    <string name="calculatorfragmenttitle">CalculatorFragmentTitle</string>
+    <string name="errors_found_message">Errors found: No errors found</string>
+    <string name="evaluation_error_message">EVALUATION ERROR: Check if input is valid, then try again.</string>
+    <string name="syntax_error_message">SYNTAX ERROR: Matrix can not have zero rows or zero columns</string>
+    <string name="matrix_size_error_message">ERROR: Matrix size is limited to a maximum of 10 rows and 10 columns</string>
+
+
+
+
+
+</resources>

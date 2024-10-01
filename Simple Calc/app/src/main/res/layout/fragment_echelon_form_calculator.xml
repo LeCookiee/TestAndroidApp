@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EchelonFormCalculator">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/errorLabel"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/errors_found_no_errors_found"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matInputBox" />
+
+        <Button
+            android:id="@+id/calculateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/solve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/errorLabel" />
+
+        <TextView
+            android:id="@+id/fragmentDesc"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/echelon_calc_fragment_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/numRowsLabel"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/number_of_rows"
+            app:layout_constraintStart_toStartOf="@+id/fragmentDesc"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentDesc" />
+
+        <EditText
+            android:id="@+id/rowEditNum"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:ems="2"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            app:layout_constraintBottom_toBottomOf="@+id/numRowsLabel"
+            app:layout_constraintStart_toEndOf="@+id/numRowsLabel"
+            app:layout_constraintTop_toTopOf="@+id/numRowsLabel"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/numColumnsLabel"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="@string/number_of_columns"
+            app:layout_constraintEnd_toStartOf="@+id/columnEditNum"
+            app:layout_constraintTop_toTopOf="@+id/numRowsLabel" />
+
+        <EditText
+            android:id="@+id/columnEditNum"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            app:layout_constraintBottom_toBottomOf="@+id/numColumnsLabel"
+            app:layout_constraintEnd_toEndOf="@+id/fragmentDesc"
+            app:layout_constraintTop_toTopOf="@+id/numColumnsLabel"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/enterMatrix"
+            app:layout_constraintStart_toStartOf="@+id/numRowsLabel"
+            app:layout_constraintTop_toBottomOf="@+id/rowEditNum" />
+
+        <EditText
+            android:id="@+id/matInputBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintWidth_percent="0.8"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/efSolutionLabel"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/solution_will_be_displayed_below"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculateBtn" />
+
+        <com.agog.mathdisplay.MTMathView
+            android:id="@+id/efSolutionDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/efSolutionLabel"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circle"
+                android:contentDescription="@string/home"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/home_button__1_" />
+
+            <TextView
+                android:id="@+id/fragmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/echelon_form_fragment_title"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

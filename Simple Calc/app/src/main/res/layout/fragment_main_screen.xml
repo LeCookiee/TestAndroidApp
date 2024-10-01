@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EchelonFormCalculator">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_marginTop="80dp"
+            android:contentDescription="@string/match_calculators_for_everyone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/math_calc_title_redo" />
+
+
+        <Button
+            android:id="@+id/toBasic"
+            android:layout_width="165dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/basic_calculator"
+            app:layout_constraintEnd_toEndOf="@+id/toCalcListBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/toCalcListBtn"
+            app:layout_constraintTop_toBottomOf="@+id/toCalcListBtn" />
+
+        <Button
+            android:id="@+id/toCalcListBtn"
+            android:layout_width="165dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/calc_list_display_btn"
+            app:layout_constraintEnd_toEndOf="@+id/intro"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/intro"
+            app:layout_constraintTop_toBottomOf="@+id/intro"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/intro"
+            android:layout_width="165dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/introduction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/deleteApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:clickable="true"
+            android:contentDescription="@string/delete_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toBasic"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

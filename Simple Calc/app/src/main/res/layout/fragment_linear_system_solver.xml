@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearSystemSolver">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="442dp">
+
+        <EditText
+            android:id="@+id/equationsInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="@+id/fragmentDesc"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/fragmentDesc"
+            app:layout_constraintTop_toBottomOf="@+id/numEquationLabel"
+            app:layout_constraintWidth_percent="0.8"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+        <com.agog.mathdisplay.MTMathView
+            android:id="@+id/solutionView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/textview"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/solutionLabel"
+            app:layout_constraintStart_toStartOf="@+id/solutionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/solutionLabel" />
+
+        <TextView
+            android:id="@+id/solutionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/solutions"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/errorLabel"
+            app:layout_constraintStart_toStartOf="@+id/errorLabel"
+            app:layout_constraintTop_toBottomOf="@+id/errorLabel" />
+
+        <TextView
+            android:id="@+id/numEquationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/enter_each_equation_on_a_separate_line"
+            app:layout_constraintStart_toStartOf="@+id/fragmentDesc"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentDesc" />
+
+        <Button
+            android:id="@+id/solveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/solve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/solutionView" />
+
+        <TextView
+            android:id="@+id/errorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/errors_found_no_errors_found"
+            app:layout_constraintEnd_toEndOf="@+id/varDetectedLabel"
+            app:layout_constraintStart_toStartOf="@+id/varDetectedLabel"
+            app:layout_constraintTop_toBottomOf="@+id/varDetectedLabel" />
+
+        <TextView
+            android:id="@+id/varDetectedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/variables_detected_none"
+            app:flow_horizontalBias="0.5"
+            app:layout_constraintEnd_toEndOf="@+id/equationsInput"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/equationsInput"
+            app:layout_constraintTop_toBottomOf="@+id/equationsInput" />
+
+        <TextView
+            android:id="@+id/fragmentDesc"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/linear_system_fragment_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LinearEquationsCalcToolBar"
+            tools:ignore="VisualLintLongText" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/LinearEquationsCalcToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circle"
+                android:contentDescription="@string/home"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/home_button__1_" />
+
+            <TextView
+                android:id="@+id/fragmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/linear_system_fragment_title"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
